@@ -30,15 +30,15 @@ namespace JukeBoxWebApp.Controllers
 
                 if (user != null)
                 {
-                    var usrEnabled = (bool)user.basic.Enabled;
-                    if (usrEnabled)
+                   // var usrEnabled = (bool)user.basic.Enabled;
+                    if (user != null)
                     {
 
                         var actionList = (string)System.Web.HttpContext.Current.Session["AccessToken"];
 
                         if (actionList == null)
                         {
-                            System.Web.HttpContext.Current.Session["AccessToken"] = user.AccessToken.Token;
+                            System.Web.HttpContext.Current.Session["AccessToken"] = "xhsu5stgajksa7ssjs7s67scs";
                         }
                         return RedirectToAction("Index","Home");
                     }

@@ -16,7 +16,7 @@ namespace JukeBox.BLL.Administration
     {
         public static async Task<UserModel> ApiLoginClient(UserRequestLogin login)
         {
-            var req = new RestRequest("api/admin/login", Method.POST);
+            var req = new RestRequest("api/Account/user/login", Method.POST);
             req.RequestFormat = DataFormat.Json;
             req.JsonSerializer = JsonSerializer.Default;
             req.AddBody(login);
